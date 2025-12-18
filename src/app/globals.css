@@ -28,6 +28,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.debugger {
+  border: 1px solid red;
+}
+
 /* Primary gradient utility class */
 .bg-primary-gradient {
   background: linear-gradient(90deg, #0290de 0%, #014e78 100%);
@@ -35,4 +39,18 @@ body {
 
 .bg-primary-gradient-hover {
   background: linear-gradient(90deg, #014e78 0%, #013a5a 100%);
+}
+
+/* Auto-scroll animation for sponsors */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
 }

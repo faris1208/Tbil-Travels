@@ -1,0 +1,198 @@
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+
+export default function StudyAbroadNavbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const navLinks = [
+    { href: "/study-abroad", label: "ABOUT US" },
+    { href: "/study-abroad/institutions", label: "INSTITUTIONS" },
+    { href: "/study-abroad/services", label: "SERVICES" },
+    { href: "/study-abroad/our-office", label: "OUR OFFICE" },
+    { href: "/study-abroad/our-events", label: "OUR EVENTS" },
+    { href: "/study-abroad/recent-news", label: "RECENT NEWS" },
+  ];
+
+  return (
+    <nav className="sticky top-0 z-50 w-full bg-white shadow-sm">
+      {/* Top Section */}
+      <div className="bg-gray-50 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-end h-10 text-xs sm:text-sm text-gray-600">
+            <div className="flex items-center gap-2 sm:gap-4 flex-wrap justify-end">
+              {/* About Us / Contact Us - Hidden on very small screens */}
+              <div className="hidden sm:flex items-center gap-2">
+                <Link
+                  href="/about-us"
+                  className="hover:text-gray-900 transition-colors whitespace-nowrap"
+                >
+                  About Us
+                </Link>
+                <span className="text-gray-400">/</span>
+                <Link
+                  href="/contact"
+                  className="hover:text-gray-900 transition-colors whitespace-nowrap"
+                >
+                  Contact Us
+                </Link>
+              </div>
+              <span className="hidden sm:inline text-gray-400 mx-1 sm:mx-2">
+                |
+              </span>
+              {/* Phone Number */}
+              <a
+                href="tel:+2349080775662"
+                className="flex items-center gap-1 sm:gap-2 hover:text-gray-900 transition-colors whitespace-nowrap"
+              >
+                <svg
+                  className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <span className="hidden sm:inline">(+234) 908-077-5662</span>
+                <span className="sm:hidden text-xs">908-077-5662</span>
+              </a>
+              <span className="hidden sm:inline text-gray-400 mx-1 sm:mx-2">
+                |
+              </span>
+              {/* Search Button - Hidden on very small screens */}
+              <button
+                className="hidden sm:block hover:text-gray-900 transition-colors"
+                aria-label="Search"
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <div className="bg-white">
+        <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-4">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo/Brand */}
+            <div className="flex-shrink-0">
+              <Link
+                href="/study-abroad"
+                className="text-2xl md:text-3xl font-bold text-gray-900 hover:text-gray-700 transition-colors"
+                onClick={closeMenu}
+              >
+                Study Abroad
+              </Link>
+            </div>
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:block">
+              <div className="flex items-center space-x-1">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-[#0290de] hover:text-[#014e78] px-4 py-2 text-sm font-bold uppercase transition-colors relative group"
+                  >
+                    {link.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0290de] transition-all group-hover:w-full"></span>
+                  </Link>
+                ))}
+                <Link
+                  href="/study-abroad/book-appointment"
+                  className="bg-primary-gradient hover:bg-primary-gradient-hover text-white px-6 py-2 text-sm font-bold uppercase rounded transition-all duration-300 shadow-md hover:shadow-lg ml-4"
+                >
+                  BOOK YOUR APPOINTMENT
+                </Link>
+              </div>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="lg:hidden">
+              <button
+                onClick={toggleMenu}
+                className="text-gray-700 hover:text-gray-900 focus:outline-none"
+                aria-label="Toggle menu"
+              >
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  {isMenuOpen ? (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  ) : (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  )}
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="lg:hidden border-t border-gray-200 bg-white">
+            <div className="px-4 pt-2 pb-4 space-y-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block text-[#0290de] hover:text-[#014e78] px-3 py-2 text-sm font-bold uppercase transition-colors"
+                  onClick={closeMenu}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                href="/study-abroad/book-appointment"
+                className="block bg-primary-gradient text-white px-3 py-2 text-sm font-bold uppercase rounded text-center mt-4"
+                onClick={closeMenu}
+              >
+                BOOK YOUR APPOINTMENT
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+}
