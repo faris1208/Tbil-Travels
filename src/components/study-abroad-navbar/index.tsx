@@ -5,6 +5,10 @@ import Link from "next/link";
 
 export default function StudyAbroadNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isDestinationsDropdownOpen, setIsDestinationsDropdownOpen] =
+    useState(false);
+  const [isAboutUsDropdownOpen, setIsAboutUsDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -15,12 +19,58 @@ export default function StudyAbroadNavbar() {
   };
 
   const navLinks = [
-    { href: "/study-abroad", label: "ABOUT US" },
-    { href: "/study-abroad/institutions", label: "INSTITUTIONS" },
-    { href: "/study-abroad/services", label: "SERVICES" },
-    { href: "/study-abroad/our-office", label: "OUR OFFICE" },
-    { href: "/study-abroad/our-events", label: "OUR EVENTS" },
-    { href: "/study-abroad/recent-news", label: "RECENT NEWS" },
+    { href: "/", label: "HOME" },
+    {
+      href: "/study-abroad",
+      label: "ABOUT US",
+      hasDropdown: true,
+    },
+    {
+      href: "/study-abroad/services",
+      label: "OUR SERVICES",
+      hasDropdown: true,
+    },
+    {
+      href: "/study-abroad/destinations",
+      label: "DESTINATIONS",
+      hasDropdown: true,
+    },
+    { href: "/study-abroad/enquire", label: "ENQUIRE NOW" },
+  ];
+
+  const servicesDropdownItems = [
+    {
+      href: "/study-abroad/services/commitments",
+      label: "SERVICES & COMMITMENTS",
+    },
+    { href: "/study-abroad/services/benefits", label: "STUDY ABROAD BENEFITS" },
+    {
+      href: "/study-abroad/services/application",
+      label: "APPLICATION PROCESS",
+    },
+    { href: "/study-abroad/services/visa", label: "VISA GUIDANCE" },
+    { href: "/study-abroad/services/exhibit", label: "EXHIBIT WITH US" },
+    { href: "/study-abroad/services/fee", label: "SERVICE FEE" },
+  ];
+
+  const destinationsDropdownItems = [
+    { href: "/study-abroad/destinations/europe", label: "STUDY IN EUROPE" },
+    { href: "/study-abroad/destinations/usa", label: "STUDY IN USA" },
+    { href: "/study-abroad/destinations/canada", label: "STUDY IN CANADA" },
+    {
+      href: "/study-abroad/destinations/australia",
+      label: "STUDY IN AUSTRALIA",
+    },
+    { href: "/study-abroad/destinations/uae", label: "STUDY IN UAE" },
+    {
+      href: "/study-abroad/destinations/new-zealand",
+      label: "STUDY IN NEW ZEALAND",
+    },
+  ];
+
+  const aboutUsDropdownItems = [
+    { href: "/study-abroad/who-we-are", label: "WHO WE ARE" },
+    { href: "/study-abroad/core-values", label: "CORE VALUES" },
   ];
 
   return (
@@ -115,16 +165,79 @@ export default function StudyAbroadNavbar() {
             {/* Desktop Navigation */}
             <div className="hidden lg:block">
               <div className="flex items-center space-x-1">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-[#0290de] hover:text-[#014e78] px-4 py-2 text-sm font-bold uppercase transition-colors relative group"
-                  >
-                    {link.label}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0290de] transition-all group-hover:w-full"></span>
-                  </Link>
-                ))}
+                {navLinks.map((link) => {
+                  if (link.hasDropdown) {
+                    const isAboutUs = link.label === "ABOUT US";
+                    const isServices = link.label === "OUR SERVICES";
+                    const isDestinations = link.label === "DESTINATIONS";
+                    const dropdownItems = isAboutUs
+                      ? aboutUsDropdownItems
+                      : isServices
+                      ? servicesDropdownItems
+                      : isDestinations
+                      ? destinationsDropdownItems
+                      : [];
+                    const isDropdownOpen =
+                      (isAboutUs && isAboutUsDropdownOpen) ||
+                      (isServices && isServicesDropdownOpen) ||
+                      (isDestinations && isDestinationsDropdownOpen);
+
+                    return (
+                      <div
+                        key={link.href}
+                        className="relative group"
+                        onMouseEnter={() => {
+                          if (isAboutUs) setIsAboutUsDropdownOpen(true);
+                          if (isServices) setIsServicesDropdownOpen(true);
+                          if (isDestinations)
+                            setIsDestinationsDropdownOpen(true);
+                        }}
+                        onMouseLeave={() => {
+                          if (isAboutUs) setIsAboutUsDropdownOpen(false);
+                          if (isServices) setIsServicesDropdownOpen(false);
+                          if (isDestinations)
+                            setIsDestinationsDropdownOpen(false);
+                        }}
+                      >
+                        <Link
+                          href={link.href}
+                          className="text-[#0290de] hover:text-[#014e78] px-4 py-2 text-sm font-bold uppercase transition-colors relative block"
+                        >
+                          {link.label}
+                          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0290de] transition-all group-hover:w-full"></span>
+                        </Link>
+                        {/* Dropdown Menu */}
+                        {isDropdownOpen && (
+                          <div className="absolute top-full left-0 mt-0 w-64 bg-white shadow-xl rounded-lg border border-gray-200 py-2 z-50">
+                            {dropdownItems.map((item, index) => (
+                              <React.Fragment key={item.href}>
+                                <Link
+                                  href={item.href}
+                                  className="block px-6 py-3 text-sm font-semibold uppercase text-gray-900 hover:bg-gray-50 transition-colors"
+                                >
+                                  {item.label}
+                                </Link>
+                                {index < dropdownItems.length - 1 && (
+                                  <div className="border-t border-gray-200"></div>
+                                )}
+                              </React.Fragment>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  }
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="text-[#0290de] hover:text-[#014e78] px-4 py-2 text-sm font-bold uppercase transition-colors relative group"
+                    >
+                      {link.label}
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#0290de] transition-all group-hover:w-full"></span>
+                    </Link>
+                  );
+                })}
                 <Link
                   href="/study-abroad/book-appointment"
                   className="bg-primary-gradient hover:bg-primary-gradient-hover text-white px-6 py-2 text-sm font-bold uppercase rounded transition-all duration-300 shadow-md hover:shadow-lg ml-4"
@@ -172,16 +285,79 @@ export default function StudyAbroadNavbar() {
         {isMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 bg-white">
             <div className="px-4 pt-2 pb-4 space-y-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="block text-[#0290de] hover:text-[#014e78] px-3 py-2 text-sm font-bold uppercase transition-colors"
-                  onClick={closeMenu}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                if (link.hasDropdown) {
+                  const isAboutUs = link.label === "ABOUT US";
+                  const isServices = link.label === "OUR SERVICES";
+                  const isDestinations = link.label === "DESTINATIONS";
+                  const dropdownItems = isAboutUs
+                    ? aboutUsDropdownItems
+                    : isServices
+                    ? servicesDropdownItems
+                    : isDestinations
+                    ? destinationsDropdownItems
+                    : [];
+                  const isDropdownOpen =
+                    (isAboutUs && isAboutUsDropdownOpen) ||
+                    (isServices && isServicesDropdownOpen) ||
+                    (isDestinations && isDestinationsDropdownOpen);
+
+                  return (
+                    <div key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="block text-[#0290de] hover:text-[#014e78] px-3 py-2 text-sm font-bold uppercase transition-colors"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          if (isAboutUs) {
+                            setIsAboutUsDropdownOpen(!isAboutUsDropdownOpen);
+                            setIsServicesDropdownOpen(false);
+                            setIsDestinationsDropdownOpen(false);
+                          }
+                          if (isServices) {
+                            setIsServicesDropdownOpen(!isServicesDropdownOpen);
+                            setIsAboutUsDropdownOpen(false);
+                            setIsDestinationsDropdownOpen(false);
+                          }
+                          if (isDestinations) {
+                            setIsDestinationsDropdownOpen(
+                              !isDestinationsDropdownOpen
+                            );
+                            setIsAboutUsDropdownOpen(false);
+                            setIsServicesDropdownOpen(false);
+                          }
+                        }}
+                      >
+                        {link.label}
+                      </Link>
+                      {isDropdownOpen && (
+                        <div className="pl-4 space-y-1 border-l-2 border-gray-200 ml-2">
+                          {dropdownItems.map((item) => (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              className="block text-gray-700 hover:text-[#0290de] px-3 py-2 text-sm font-semibold uppercase transition-colors"
+                              onClick={closeMenu}
+                            >
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block text-[#0290de] hover:text-[#014e78] px-3 py-2 text-sm font-bold uppercase transition-colors"
+                    onClick={closeMenu}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
               <Link
                 href="/study-abroad/book-appointment"
                 className="block bg-primary-gradient text-white px-3 py-2 text-sm font-bold uppercase rounded text-center mt-4"
