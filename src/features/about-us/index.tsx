@@ -94,7 +94,7 @@ export default function AboutUs() {
   const stats = [
     { number: "10K+", label: "Happy Travelers" },
     { number: "50+", label: "Destinations" },
-    { number: "15+", label: "Years Experience" },
+    { number: "10+", label: "Years Experience" },
     { number: "24/7", label: "Support" },
   ];
 
@@ -123,11 +123,15 @@ export default function AboutUs() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Tbil Travels stands as the holiday division of Tbil Travels,
-                  dedicated to curating bespoke and cost-effective vacations for
-                  all kinds of travelers. Founded with a passion for exploration
-                  and a commitment to excellence, we have been transforming
-                  travel dreams into reality for over a decade.
+                  Tbil Travels stands as a full-service travel agency committed
+                  to delivering reliable, efficient, and cost-effective travel
+                  solutions for individuals, families, and organizations.
+                  Founded with a strong dedication to professionalism and
+                  excellence, we have spent over a decade facilitating seamless
+                  travel experiences, including flight bookings, visa
+                  assistance, study-abroad travel support, and other essential
+                  travel services. Our mission is to make every journey smooth,
+                  secure, and stress-free from start to finish.
                 </p>
                 <p>
                   What started as a small travel agency has grown into a
@@ -301,8 +305,8 @@ export default function AboutUs() {
               "Tour & Vacation Packages",
               "Study Abroad Programs",
               "Flight Reservations",
-              "Visa Support & Assistance",
-              "Travel Insurance",
+              "Visa Application",
+              "Proof Of Funds",
               "Hotel Reservations & Airport Transfers",
             ].map((service, index) => (
               <div

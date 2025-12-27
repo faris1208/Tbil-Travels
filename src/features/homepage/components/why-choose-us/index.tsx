@@ -21,55 +21,57 @@ const features = [
     title: "Trusted & Reliable",
     description:
       "With years of experience in the travel industry, we provide trustworthy and reliable services. Your safety and satisfaction are our top priorities.",
+    hoverFrom: "from-[#0290de]",
+    hoverTo: "to-[#014e78]",
   },
-  {
-    icon: (
-      <svg
-        className="w-12 h-12"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </svg>
-    ),
-    title: "Best Value for Money",
-    description:
-      "We offer competitive prices without compromising on quality. Get the most out of your travel budget with our carefully curated packages and exclusive deals.",
-  },
-  {
-    icon: (
-      <svg
-        className="w-12 h-12"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-        />
-      </svg>
-    ),
-    title: "Authentic Experiences",
-    description:
-      "Discover hidden gems and authentic local experiences. Our carefully designed itineraries take you beyond tourist traps to the heart of each destination.",
-  },
+  // {
+  //   icon: (
+  //     <svg
+  //       className="w-12 h-12"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       viewBox="0 0 24 24"
+  //       xmlns="http://www.w3.org/2000/svg"
+  //     >
+  //       <path
+  //         strokeLinecap="round"
+  //         strokeLinejoin="round"
+  //         strokeWidth={2}
+  //         d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+  //       />
+  //     </svg>
+  //   ),
+  //   title: "Best Value for Money",
+  //   description:
+  //     "We offer competitive prices without compromising on quality. Get the most out of your travel budget with our carefully curated packages and exclusive deals.",
+  // },
+  // {
+  //   icon: (
+  //     <svg
+  //       className="w-12 h-12"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       viewBox="0 0 24 24"
+  //       xmlns="http://www.w3.org/2000/svg"
+  //     >
+  //       <path
+  //         strokeLinecap="round"
+  //         strokeLinejoin="round"
+  //         strokeWidth={2}
+  //         d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+  //       />
+  //       <path
+  //         strokeLinecap="round"
+  //         strokeLinejoin="round"
+  //         strokeWidth={2}
+  //         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+  //       />
+  //     </svg>
+  //   ),
+  //   title: "Authentic Experiences",
+  //   description:
+  //     "Discover hidden gems and authentic local experiences. Our carefully designed itineraries take you beyond tourist traps to the heart of each destination.",
+  // },
   {
     icon: (
       <svg
@@ -90,6 +92,8 @@ const features = [
     title: "24/7 Support",
     description:
       "Our dedicated support team is available around the clock to assist you. From booking to your return, we're here to ensure a smooth journey.",
+    hoverFrom: "from-[#10b981]",
+    hoverTo: "to-[#047857]",
   },
   {
     icon: (
@@ -111,28 +115,30 @@ const features = [
     title: "Flexible Booking",
     description:
       "Life happens, and plans change. Enjoy flexible booking options and easy modifications to accommodate your needs and schedule.",
+    hoverFrom: "from-[#f59e0b]",
+    hoverTo: "to-[#b45309]",
   },
-  {
-    icon: (
-      <svg
-        className="w-12 h-12"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-        />
-      </svg>
-    ),
-    title: "Expert Local Guides",
-    description:
-      "Travel with confidence alongside our knowledgeable local guides who share insider tips, cultural insights, and ensure you make the most of every moment.",
-  },
+  // {
+  //   icon: (
+  //     <svg
+  //       className="w-12 h-12"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       viewBox="0 0 24 24"
+  //       xmlns="http://www.w3.org/2000/svg"
+  //     >
+  //       <path
+  //         strokeLinecap="round"
+  //         strokeLinejoin="round"
+  //         strokeWidth={2}
+  //         d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+  //       />
+  //     </svg>
+  //   ),
+  //   title: "Expert Local Guides",
+  //   description:
+  //     "Travel with confidence alongside our knowledgeable local guides who share insider tips, cultural insights, and ensure you make the most of every moment.",
+  // },
 ];
 
 export default function WhyChooseUs() {
@@ -156,13 +162,21 @@ export default function WhyChooseUs() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className={`
+                group bg-white rounded-xl p-8 shadow-md transition-all duration-300
+                hover:-translate-y-2 hover:shadow-xl hover:ring-2 hover:ring-white/30
+                hover:bg-gradient-to-br ${feature.hoverFrom} ${feature.hoverTo}
+              `}
             >
-              <div className="text-[#0290de] mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <div className="text-[#0290de] mb-4 group-hover:text-white transition-colors">
+                {feature.icon}
+              </div>
+
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-white transition-colors">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+
+              <p className="text-gray-600 group-hover:text-gray-100 transition-colors">
                 {feature.description}
               </p>
             </div>

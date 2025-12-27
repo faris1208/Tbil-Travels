@@ -6,20 +6,16 @@ const services = [
     description:
       "Get expert guidance on choosing the right country, course, and university that fits your goals.",
   },
-  {
-    title: "Study Loan Application",
-    description:
-      "We help you apply for education loans from trusted banks and lenders to make your dreams affordable.",
-  },
+ 
   {
     title: "IELTS Training/Preparation",
     description:
       "Join our training classes to improve your English and get ready for IELTS and other required tests.",
   },
   {
-    title: "Alumni Connections",
+    title: "Proof Of Funds Application",
     description:
-      "Talk to past students who have studied at your chosen university and learn from their experience.",
+      "We provide proof of fund at competitive rate to all our candidate in need of the service.",
   },
   {
     title: "Visa Counseling",
@@ -30,11 +26,6 @@ const services = [
     title: "Agent Partnerships",
     description:
       "We partner with agents and counselors to provide trusted support across different regions.",
-  },
-  {
-    title: "Accommodation Support",
-    description:
-      "We can help you find safe and affordable housing near your university or off-campus.",
   },
   {
     title: "Pre-Departure Briefing",

@@ -81,7 +81,6 @@ export default function Footer() {
                 <h2 className="text-3xl font-bold text-blue-600 mb-1">
                   Tbil Travels
                 </h2>
-                <p className="text-sm font-semibold text-[#0290de]">HOLIDAYS</p>
               </Link>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed mb-6 max-w-md">
@@ -183,7 +182,7 @@ export default function Footer() {
                   />
                 </svg>
                 <span>
-                  Plot 8, Elegushi Beach Road, Ikate Roundabout, Lekki, Lagos.
+                Plot 1-3, Shasha road, Akowonjo Roundabout, Beside De-Santos hotel, Akowonjo, Lagos, Nigeria, 100231
                 </span>
               </li>
               <li className="flex items-center gap-2">
@@ -202,16 +201,16 @@ export default function Footer() {
                 </svg>
                 <div className="flex flex-col">
                   <a
-                    href="tel:+2349085551797"
+                    href="tel:+2349132907238"
                     className="hover:text-gray-900 transition-colors"
                   >
-                    +234 908 5551 797
+                    09132907238
                   </a>
                   <a
-                    href="tel:+2349087738270"
+                    href="tel:+2349038797700"
                     className="hover:text-gray-900 transition-colors"
                   >
-                    +234 908 7738 270
+                    09038797700
                   </a>
                 </div>
               </li>
@@ -233,7 +232,7 @@ export default function Footer() {
                   href="mailto:holidays@tbil-travels.com"
                   className="hover:text-gray-900 transition-colors"
                 >
-                  holidays@tbil-travels.com
+                  info@tbils.com
                 </a>
               </li>
             </ul>

@@ -73,7 +73,7 @@ export default function ContactPage() {
         </svg>
       ),
       title: "Address",
-      content: "Plot 8, Elegushi Beach Road, Ikate Roundabout, Lekki, Lagos.",
+      content: " Plot 1-3, Shasha road, Akowonjo Roundabout, Beside De-Santos hotel, Akowonjo, Lagos, Nigeria, 100231",
       link: null,
     },
     {
@@ -93,8 +93,8 @@ export default function ContactPage() {
         </svg>
       ),
       title: "Phone",
-      content: "+234 908 5551 797",
-      link: "tel:+2349085551797",
+      content: "+234 9132907238",
+      link: "tel:+2349132907238",
     },
     {
       icon: (
@@ -113,7 +113,7 @@ export default function ContactPage() {
         </svg>
       ),
       title: "Email",
-      content: "holidays@tbil-travels.com",
+      content: "info@tbils.com",
       link: "mailto:holidays@tbil-travels.com",
     },
   ];
@@ -375,11 +375,11 @@ export default function ContactPage() {
               <div className="space-y-2 text-gray-600">
                 <p className="flex justify-between">
                   <span>Monday - Friday</span>
-                  <span className="font-medium">9:00 AM - 6:00 PM</span>
+                  <span className="font-medium">8:00 AM - 5:00 PM</span>
                 </p>
                 <p className="flex justify-between">
                   <span>Saturday</span>
-                  <span className="font-medium">10:00 AM - 4:00 PM</span>
+                  <span className="font-medium">10:00 AM - 2:00 PM</span>
                 </p>
                 <p className="flex justify-between">
                   <span>Sunday</span>

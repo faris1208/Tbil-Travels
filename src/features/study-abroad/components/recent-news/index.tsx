@@ -25,7 +25,7 @@ const newsArticles = [
 
 const studentReview = {
   quote:
-    "TGM Education is one of the best Agencies in Nigeria. I got to know TGM Education through Google search. They offer the best services in a friendly atmosphere. They are transparent, hospitable and very professional. I will recommend TGM Education for anyone who wants to study abroad.",
+    "My experience with Tbil Travel Education has been outstanding. I found them through a Google search, and from the very beginning, their professionalism and transparency stood out. They offer excellent services in a friendly and welcoming atmosphere, and the team is truly hospitable and supportive. I highly recommend Tbil Travel Education to anyone planning to study abroad.",
   name: "Oluwasanya Olufemi",
   degree: "Marketing & Digital Strategy | MSc",
   avatar: "/WhatsApp Image 2025-11-20 at 14.57.53 (2).jpeg",
