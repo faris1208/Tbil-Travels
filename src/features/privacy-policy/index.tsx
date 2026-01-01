@@ -191,22 +191,22 @@ export default function PrivacyPolicy() {
                   <strong>Tbil Travels</strong>
                 </p>
                 <p className="text-gray-600 mb-2">
-                  Plot 8, Elegushi Beach Road, Ikate Roundabout, Lekki, Lagos.
+                Plot 1-3, Shasha road, Akowonjo Roundabout, Beside De-Santos hotel, Akowonjo, Lagos, Nigeria, 100231
                 </p>
                 <p className="text-gray-600 mb-2">
                   <strong>Phone:</strong>{" "}
-                  <a href="tel:+2349085551797" className="text-[#0290de] hover:underline">
-                    +234 908 5551 797
+                  <a href="tel:+2349132907238" className="text-[#0290de] hover:underline">
+                  09132907238
                   </a>
                   {" / "}
-                  <a href="tel:+2349087738270" className="text-[#0290de] hover:underline">
-                    +234 908 7738 270
-                  </a>
+                  {/* <a href="tel:+2349038797700" className="text-[#0290de] hover:underline">
+                  09038797700
+                  </a> */}
                 </p>
                 <p className="text-gray-600">
                   <strong>Email:</strong>{" "}
                   <a href="mailto:holidays@tbil-travels.com" className="text-[#0290de] hover:underline">
-                    holidays@tbil-travels.com
+                    info@tbils.com
                   </a>
                 </p>
               </div>

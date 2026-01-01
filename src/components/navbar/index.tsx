@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../../../public/tbilnew_logo_blue.svg"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,6 +20,7 @@ export default function Navbar() {
     { href: "/", label: "Home" },
     { href: "/study-abroad", label: "Study Abroad" },
       { href: "https://www.tbils.com/", target: "_blank", rel: "noopener noreferrer", label: "Flight Booking" },
+      { href: "https://property.tbils.com", target: "_blank", rel: "noopener noreferrer", label: "Properties" },
       { href: "https://www.tbils.com/visa-application", target: "_blank", rel: "noopener noreferrer", label: "Visa Support" },
     { href: "/about-us", label: "About Us" },
     { href: "/contact", label: "Contact" },
@@ -34,13 +37,18 @@ export default function Navbar() {
               className="text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors"
               onClick={closeMenu}
             >
-              Tbil Travels
+              <Image 
+              src={logo}
+              alt="logo"
+              width={70}
+              height={20}
+              />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}

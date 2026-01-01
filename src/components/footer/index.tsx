@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../../../public/tbilnew_logo_blue.svg"
 
 export default function Footer() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -78,9 +80,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="mb-6">
               <Link href="/" className="inline-block">
-                <h2 className="text-3xl font-bold text-blue-600 mb-1">
-                  Tbil Travels
-                </h2>
+                <Image src={logo} alt="logo" width={70} height={20} />
               </Link>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed mb-6 max-w-md">
@@ -182,7 +182,8 @@ export default function Footer() {
                   />
                 </svg>
                 <span>
-                Plot 1-3, Shasha road, Akowonjo Roundabout, Beside De-Santos hotel, Akowonjo, Lagos, Nigeria, 100231
+                  Plot 1-3, Shasha road, Akowonjo Roundabout, Beside De-Santos
+                  hotel, Akowonjo, Lagos, Nigeria, 100231
                 </span>
               </li>
               <li className="flex items-center gap-2">
@@ -206,12 +207,12 @@ export default function Footer() {
                   >
                     09132907238
                   </a>
-                  <a
+                  {/* <a
                     href="tel:+2349038797700"
                     className="hover:text-gray-900 transition-colors"
                   >
                     09038797700
-                  </a>
+                  </a> */}
                 </div>
               </li>
               <li className="flex items-center gap-2">
