@@ -17,7 +17,7 @@ const carouselSlides = [
     external: false,
   },
   {
-    image: "/Tbil-Travel-H-3.jpg",
+    image: "/Frame101.webpcc6veg.webp-de83099a08f9977179f76cbc5eb0e37e-doc.webp",
     subtitle: "Flight",
     title: "BOOKING",
     description: "Best deals on flights worldwide. Book your journey today.",
@@ -26,7 +26,7 @@ const carouselSlides = [
     external: true,
   },
   {
-    image: "/Top-attractions-itinerary.jpeg",
+    image: "/Frame 1686562769 (5).webp",
     subtitle: "Visa",
     title: "SUPPORT",
     description: "Expert assistance with visa applications and documentation.",
@@ -44,7 +44,7 @@ const carouselSlides = [
     external: false,
   },
   {
-    image: "/WhatsApp Image 2025-11-20 at 14.57.53 (2).jpeg",
+    image: "/10-Things-Not-to-Wear-on-a-Plane-_-Airfarewatchdog.jpeg",
     subtitle: "Your Journey",
     title: "STARTS HERE",
     description: "Complete travel solutions for all your needs.",
@@ -70,7 +70,7 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="relative w-full h-[600px] overflow-hidden">
+    <div className="relative w-full h-[700px] overflow-hidden">
       {/* Image Carousel with sliding effect */}
       <div className="relative w-full h-full flex">
         {carouselSlides.map((slide, index) => (
