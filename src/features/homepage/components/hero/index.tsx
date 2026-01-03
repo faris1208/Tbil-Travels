@@ -35,7 +35,7 @@ const carouselSlides = [
     external: true,
   },
   {
-    image: "/WhatsApp Image 2025-11-20 at 14.57.53 (1).jpeg",
+    image: "/2026-01-03 16.30.45.jpg",
     subtitle: "Travel",
     title: "PACKAGES",
     description: "Curated travel experiences tailored to your dreams.",
