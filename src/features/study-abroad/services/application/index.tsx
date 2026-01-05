@@ -6,14 +6,20 @@ import Link from "next/link";
 
 export default function ApplicationProcess() {
   const formatDescription = (text: string) => {
-    // Split by PIS and bold it, also handle italicized text
-    const parts = text.split(/(PIS|In-complete documents will cause delays, and sometimes visa rejections)/g);
+    // Split by  and bold it, also handle italicized text
+    const parts = text.split(
+      /(TBILS|In-complete documents will cause delays, and sometimes visa rejections)/g
+    );
     return parts.map((part, index) => {
-      if (part === "PIS") {
-        return <strong key={index}>PIS</strong>;
+      if (part === "") {
+        return <strong key={index}>TBILS</strong>;
       }
       if (part.includes("In-complete")) {
-        return <em key={index} className="italic">{part}</em>;
+        return (
+          <em key={index} className="italic">
+            {part}
+          </em>
+        );
       }
       return <React.Fragment key={index}>{part}</React.Fragment>;
     });
@@ -22,9 +28,9 @@ export default function ApplicationProcess() {
   const steps = [
     {
       number: 1,
-      title: "Arrange An Appointment With PIS Expert Staff",
+      title: "Arrange An Appointment With TBILS Expert Staff",
       description:
-        "Meeting with an experienced PIS counsellor will allow you to discuss your options and choose the right fit for you.",
+        "Meeting with an experienced TBILS counsellor will allow you to discuss your options and choose the right fit for you.",
       image: "/application-process-step1.jpg", // Placeholder - man in blue shirt and red tie
     },
     {
@@ -38,14 +44,14 @@ export default function ApplicationProcess() {
       number: 3,
       title: "Receive Your Offer Letter",
       description:
-        "The university will give you offer letter if you have met the criteria for admissions. PIS will keep in regular contact with you and with your institution of choice.",
+        "The university will give you offer letter if you have met the criteria for admissions. TBILS will keep in regular contact with you and with your institution of choice.",
       image: "/application-process-step3.jpg", // Placeholder - Asian man with books
     },
     {
       number: 4,
       title: "Accept Your Offer",
       description:
-        "Once you have decided to accept your offer, PIS staff can help you notify the institution and pay any required deposit in both a secure and timely manner.",
+        "Once you have decided to accept your offer, TBILS staff can help you notify the institution and pay any required deposit in both a secure and timely manner.",
       image: "/application-process-step4.jpg", // Placeholder - hand holding document
     },
     {
@@ -59,7 +65,7 @@ export default function ApplicationProcess() {
       number: 6,
       title: "Prepare For Your Overseas Studies",
       description:
-        "Now your visa's filed you will need to start making preparations for living abroad, including booking accommodation. PIS staff can assist you throughout and will hold pre-departure briefings for students.",
+        "Now your visa's filed you will need to start making preparations for living abroad, including booking accommodation. TBILS staff can assist you throughout and will hold pre-departure briefings for students.",
       image: "/application-process-step6.jpg", // Placeholder - passport and boarding pass
     },
   ];
@@ -177,4 +183,3 @@ export default function ApplicationProcess() {
     </div>
   );
 }
-

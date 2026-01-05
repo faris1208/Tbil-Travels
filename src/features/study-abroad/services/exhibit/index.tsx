@@ -39,7 +39,7 @@ export default function ExhibitWithUs() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        {/* Section 1: PIS Education Exhibitions */}
+        {/* Section 1: TBILS Education Exhibitions */}
         <section className="mb-16 md:mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left: Exhibition Booth Image */}
@@ -55,11 +55,11 @@ export default function ExhibitWithUs() {
             {/* Right: Text Content */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                PIS Education Exhibitions
+                TBILS Education Exhibitions
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Experienced <strong>PIS</strong> staff run a number of highly
+                  Experienced <strong>TBILS</strong> staff run a number of highly
                   successful education exhibitions every year. The exhibitions
                   provide a safe and focused platform for its partners to meet
                   parents and counsel potential students in Nigeria who desire
@@ -69,8 +69,8 @@ export default function ExhibitWithUs() {
                 </p>
                 <p>
                   The exhibition events are held at strategic venues within key{" "}
-                  <strong>PIS</strong> cities and attract a high number of
-                  quality students. <strong>PIS</strong> brings together
+                  <strong>TBILS</strong> cities and attract a high number of
+                  quality students. <strong>TBILS</strong> brings together
                   exhibitors from all over the world to showcase college,
                   bachelor, master, MBA and PhD study opportunities.
                 </p>
@@ -89,12 +89,12 @@ export default function ExhibitWithUs() {
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed mb-6">
                 <p>
-                  The exhibitions are promoted across <strong>PIS</strong>'s
+                  The exhibitions are promoted across <strong>TBILS</strong>'s
                   established networks of schools and universities, along with
                   targeted marketing campaigns in the local media.
                 </p>
                 <p>
-                  <strong>PIS</strong> Exhibition is a high value, well branded
+                  <strong>TBILS</strong> Exhibition is a high value, well branded
                   and highly publicised event which is considered as a lifeline
                   for many educational institutions for student recruitment.
                   Besides student recruitment, this fair object is also to
@@ -105,7 +105,7 @@ export default function ExhibitWithUs() {
               </div>
 
               <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-                PIS can also offer:
+                TBILS can also offer:
               </h3>
               <ul className="space-y-3 text-gray-700 mb-6">
                 <li className="flex items-start">
@@ -120,13 +120,13 @@ export default function ExhibitWithUs() {
                   <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
                   <span>
                     Follow up of data collected during exhibitions by{" "}
-                    <strong>PIS</strong> dedicated customer services team.
+                    <strong>TBILS</strong> dedicated customer services team.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
                   <span>
-                    One to one sessions by designated <strong>PIS</strong> staff
+                    One to one sessions by designated <strong>TBILS</strong> staff
                     with prospective students on behalf of the partner.
                   </span>
                 </li>

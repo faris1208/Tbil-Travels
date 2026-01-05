@@ -56,10 +56,10 @@ export default function VisaGuidance() {
               </p>
 
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Role of PIS in Visa Guidance
+                Role of TBILS in Visa Guidance
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                <strong>PIS</strong> has expert staff to guide you through the
+                <strong>TBILS</strong> has expert staff to guide you through the
                 whole process, whether you choose to study in the UK, Canada,
                 U.S, Australia, or the UAE. The process can be complicated and
                 universities often encourage international students to seek
@@ -152,10 +152,10 @@ export default function VisaGuidance() {
           </div>
         </section>
 
-        {/* Section 3: PIS Visa Guidance Services */}
+        {/* Section 3: TBILS Visa Guidance Services */}
         <section className="mb-12 md:mb-16">
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-            PIS Visa Guidance Services includes:
+            TBILS Visa Guidance Services includes:
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <ul className="space-y-3 text-gray-700">
@@ -185,7 +185,7 @@ export default function VisaGuidance() {
                 <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
                 <span>
                   In the unfortunate event that your visa application is
-                  rejected, <strong>PIS</strong> will examine the reasons
+                  rejected, <strong>TBILS</strong> will examine the reasons
                   provided and advise you on how you may be able to appeal Visa
                   Guidance
                 </span>
@@ -201,7 +201,7 @@ export default function VisaGuidance() {
           </h3>
           <p className="text-gray-700 leading-relaxed max-w-3xl">
             Many immigration offices will also invite you for an interview.{" "}
-            <strong>PIS</strong> provide full support in preparing you for the
+            <strong>TBILS</strong> provide full support in preparing you for the
             interview, advising on the likely format and examples of questions
             you may be asked.
           </p>
@@ -213,7 +213,7 @@ export default function VisaGuidance() {
             Visa Restrictions
           </h3>
           <p className="text-gray-700 leading-relaxed mb-4 max-w-3xl">
-            Highly experienced <strong>PIS</strong> staff will also be able to
+            Highly experienced <strong>TBILS</strong> staff will also be able to
             advise you on the restrictions of your study visa, for example,
             whether you can:
           </p>
@@ -233,10 +233,10 @@ export default function VisaGuidance() {
           </ul>
         </section>
 
-        {/* Section 6: Contact PIS */}
+        {/* Section 6: Contact TBILS */}
         <section className="mb-12 md:mb-16">
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Contact PIS
+            Contact TBILS
           </h3>
           <p className="text-gray-700 leading-relaxed max-w-3xl">
             Applying for your visa is not an easy task. Let our trained staff

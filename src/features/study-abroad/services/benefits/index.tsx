@@ -68,9 +68,9 @@ export default function StudyAbroadBenefits() {
                   Nigeria.
                 </p>
                 <p>
-                  The advantages and disadvantages for studying abroad might vary
-                  but for Nigerian students it benefits to be exposes to a new
-                  culture and land.
+                  The advantages and disadvantages for studying abroad might
+                  vary but for Nigerian students it benefits to be exposes to a
+                  new culture and land.
                 </p>
               </div>
             </div>
@@ -84,10 +84,10 @@ export default function StudyAbroadBenefits() {
             <div className="space-y-6">
               <div className="bg-gray-50 p-6 rounded-lg">
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  <strong>PIS</strong> partners with wide range of Universities
-                  specialized in research and technology. There is a reduction of
-                  communication & application costs. Contact us today and let's
-                  get started with your consultation.
+                  <strong>TBILS</strong> partners with wide range of
+                  Universities specialized in research and technology. There is
+                  a reduction of communication & application costs. Contact us
+                  today and let's get started with your consultation.
                 </p>
               </div>
 
@@ -112,7 +112,7 @@ export default function StudyAbroadBenefits() {
                   </h4>
                   <p className="text-gray-700 leading-relaxed">
                     Studying abroad broadens your skills and qualifications.{" "}
-                    <strong>PIS</strong> is affiliated with reputable
+                    <strong>TBILS</strong> is affiliated with reputable
                     universities globally offering courses in Engineering,
                     Medical, Interior, and more.
                   </p>
@@ -154,7 +154,7 @@ export default function StudyAbroadBenefits() {
               <div className="relative w-full h-full bg-gradient-to-b from-blue-50 to-white rounded-lg overflow-hidden">
                 {/* Landmarks */}
                 <div className="absolute inset-0 flex items-end justify-around px-4 py-8">
-                  {/* Leaning Tower of Pisa */}
+                  {/* Leaning Tower of a */}
                   <div className="relative">
                     <div className="w-16 h-32 bg-gray-300 rounded-t-lg transform -rotate-12"></div>
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-6 bg-gray-400 rounded"></div>
@@ -223,4 +223,3 @@ export default function StudyAbroadBenefits() {
     </div>
   );
 }
-

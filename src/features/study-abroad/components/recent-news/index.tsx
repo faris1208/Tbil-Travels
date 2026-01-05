@@ -5,21 +5,21 @@ import Link from "next/link";
 const newsArticles = [
   {
     id: 1,
-    image: "/WhatsApp Image 2025-11-20 at 14.57.54.jpeg",
+    image: "/visa-application-mistake.jpg",
     headline:
       "5 Visa Application Mistakes That Could Derail Your Study Abroad Dream (And How TGM Education Saves the Day)",
     snippet:
       "Imagine you're clutching your admission letter, your family's throwing a...",
-    link: "/study-abroad/news/visa-mistakes",
+    link: "/study-abroad/news",
   },
   {
     id: 2,
-    image: "/WhatsApp Image 2025-11-20 at 14.57.53 (1).jpeg",
+    image: "/packing-list.jpg",
     headline:
       "Essential Study Abroad Packing List for Nigerian Students Travelling Abroad in 2026",
     snippet:
       "Preparing to study abroad is exciting, but packing can quickly...",
-    link: "/study-abroad/news/packing-list",
+    link: "/study-abroad",
   },
 ];
 

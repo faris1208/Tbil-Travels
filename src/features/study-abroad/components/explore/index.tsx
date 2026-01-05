@@ -11,7 +11,7 @@ const steps = [
   {
     id: 2,
     title: "Apply & Get Admitted",
-    image: "/WhatsApp Image 2025-11-20 at 14.57.53 (1).jpeg", // Replace with actual image
+    image: "/Get-Admission.jpg", // Replace with actual image
     description: "We handle your application process with partner universities",
   },
   {
@@ -29,7 +29,7 @@ const steps = [
   {
     id: 4,
     title: "Pre-Departure & Arrival",
-    image: "/Tbil-Travel-H-3.jpg", // Replace with actual image
+    image: "/Pre-Departure.jpg", // Replace with actual image
     description: "Get ready for your journey with pre-departure guidance",
   },
 ];

@@ -118,7 +118,7 @@ export default function StudyInUAE() {
                 environment.
               </p>
               <p>
-                <strong>PIS</strong> assists students in finding the right programs
+                <strong>TBILS</strong> assists students in finding the right programs
                 in UAE universities, helping with applications and understanding the
                 local education system.
               </p>

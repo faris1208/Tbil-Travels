@@ -11,7 +11,7 @@ export default function StudyAbroadPage() {
       <StudyAbroadHero />
       <StudyAbroadExplore />
       <StudyAbroadOurServices />
-      <StudyAbroadSponsors />
+      {/* <StudyAbroadSponsors /> */}
       <StudyAbroadRecentNews />
     </div>
   );

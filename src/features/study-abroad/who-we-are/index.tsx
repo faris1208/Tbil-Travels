@@ -54,23 +54,28 @@ export default function WhoWeAre() {
     <div className="min-h-screen bg-white">
       {/* Header Section */}
       <div className="relative bg-[#014e78] text-white py-20 md:py-32 overflow-hidden">
-        {/* Background Pattern */}
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
-            backgroundSize: "30px 30px",
-          }}
-        ></div>
+        {/* Background Image */}
+        <Image
+         src="/abouts-us-hero-1.jpg"
+          alt="About background"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* Overlay (optional, for readability) */}
+        <div className="absolute inset-0 bg-[#014e78]/70"></div>
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="mb-4 text-sm md:text-base">
             <Link href="/" className="hover:underline">
               HOME
             </Link>
-            <span className="mx-2">{" > "}</span>
+            <span className="mx-2">{">"}</span>
             <span>WHO WE ARE</span>
           </div>
+
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
             ABOUT US
           </h1>
@@ -85,7 +90,7 @@ export default function WhoWeAre() {
             {/* Left: Image */}
             <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/Tbil-Travel-H-3.jpg"
+                src="/about-us-tbils.jpg"
                 alt="Tbil Travels consultation"
                 fill
                 className="object-cover"
@@ -329,7 +334,7 @@ export default function WhoWeAre() {
             {/* Right: Image */}
             <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/Tbil-Travel-H-3.jpg"
+                src="/why-choose-tbils.jpg"
                 alt="Student studying"
                 fill
                 className="object-cover"

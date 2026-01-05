@@ -39,13 +39,13 @@ export default function ServicesAndCommitments() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        {/* Section 1: PIS Services */}
+        {/* Section 1: TBILS Services */}
         <section className="mb-16 md:mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
             {/* Left: Text Content */}
             <div className="lg:col-span-2">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                PIS Services
+                TBILS Services
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
                 We provide overseas students with higher education opportunities

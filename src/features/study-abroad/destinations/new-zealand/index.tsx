@@ -118,7 +118,7 @@ export default function StudyInNewZealand() {
                 research excellence.
               </p>
               <p>
-                <strong>PIS</strong> provides comprehensive support for students
+                <strong>TBILS</strong> provides comprehensive support for students
                 planning to study in New Zealand, from university selection to visa
                 processing.
               </p>

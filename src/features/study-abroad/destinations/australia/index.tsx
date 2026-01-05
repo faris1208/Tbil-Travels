@@ -117,7 +117,7 @@ export default function StudyInAustralia() {
                 excellence and innovative teaching methods.
               </p>
               <p>
-                <strong>PIS</strong> provides expert guidance for students
+                <strong>TBIL TRAVELS</strong> provides expert guidance for students
                 interested in studying in Australia, helping with university
                 selection, application processes, and visa requirements.
               </p>

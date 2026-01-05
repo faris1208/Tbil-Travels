@@ -117,7 +117,7 @@ export default function StudyInCanada() {
                 are recognized globally and offer excellent value for money.
               </p>
               <p>
-                <strong>PIS</strong> helps students navigate the Canadian education
+                <strong>TBILS</strong> helps students navigate the Canadian education
                 system, from application to visa processing, ensuring a smooth
                 transition to studying in Canada.
               </p>

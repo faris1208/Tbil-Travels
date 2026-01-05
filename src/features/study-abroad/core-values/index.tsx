@@ -69,23 +69,28 @@ export default function CoreValues() {
     <div className="min-h-screen bg-white">
       {/* Header Section */}
       <div className="relative bg-[#014e78] text-white py-20 md:py-32 overflow-hidden">
-        {/* Background Pattern */}
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
-            backgroundSize: "30px 30px",
-          }}
-        ></div>
+        {/* Background Image */}
+        <Image
+          src="/about-us-tbil-2.jpg"
+          alt="Core values background"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-[#014e78]/80"></div>
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="mb-4 text-sm md:text-base">
             <Link href="/" className="hover:underline">
               HOME
             </Link>
-            <span className="mx-2">{" > "}</span>
+            <span className="mx-2">{">"}</span>
             <span>CORE VALUES</span>
           </div>
+
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
             OUR CORE VALUES
           </h1>
@@ -100,7 +105,7 @@ export default function CoreValues() {
             {/* Left: Image with Hexagonal Icons Overlay */}
             <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/Tbil-Travel-H-3.jpg"
+                src="/core-values.jpg"
                 alt="Core Values"
                 fill
                 className="object-cover"
@@ -148,9 +153,9 @@ export default function CoreValues() {
                   foundation of our approach to the client experience can be
                   found in our core values. These include always acting with
                   honesty and integrity, treating others with respect,
-                  relentlessly pursuing improvement, the meticulous management of
-                  resources, and fostering a family atmosphere for our employees,
-                  clients, and partners.
+                  relentlessly pursuing improvement, the meticulous management
+                  of resources, and fostering a family atmosphere for our
+                  employees, clients, and partners.
                 </p>
                 <p>
                   They might sound simple, but they work. Because these are the
@@ -169,7 +174,7 @@ export default function CoreValues() {
             {/* Left: Stacked Hands Image */}
             <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/Tbil-Travel-H-3.jpg"
+                src="/intergrity-tbil.jpg"
                 alt="Unity and Teamwork"
                 fill
                 className="object-cover"
@@ -186,9 +191,9 @@ export default function CoreValues() {
                   The foundation of our approach to the client experience can be
                   found in our core values. These include always acting with
                   honesty and integrity, treating others with respect,
-                  relentlessly pursuing improvement, the meticulous management of
-                  resources, and fostering a family atmosphere for our employees,
-                  clients, and partners.
+                  relentlessly pursuing improvement, the meticulous management
+                  of resources, and fostering a family atmosphere for our
+                  employees, clients, and partners.
                 </p>
                 <p>
                   They might sound simple, but they work. Because these are the
@@ -212,9 +217,9 @@ export default function CoreValues() {
                 PEOPLE DEVELOPMENT
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                A big part of our kind of leadership isn't just managing clients,
-                but how they affect students study abroad conversion rate in
-                terms of admission and student visa approvals.
+                A big part of our kind of leadership isn't just managing
+                clients, but how they affect students study abroad conversion
+                rate in terms of admission and student visa approvals.
               </p>
             </div>
             <div>
@@ -240,8 +245,8 @@ export default function CoreValues() {
                 again. In fact, 80 percent of our business every year comes from
                 referrals. Loyalty like that doesn't just happen. It's earned by
                 doing the right thing and going the extra mile for our clients
-                every single day which is more than an abstract concept but a way
-                of life.
+                every single day which is more than an abstract concept but a
+                way of life.
               </p>
             </div>
           </div>
@@ -266,4 +271,3 @@ export default function CoreValues() {
     </div>
   );
 }
-

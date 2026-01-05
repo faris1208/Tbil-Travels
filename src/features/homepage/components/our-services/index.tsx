@@ -35,7 +35,7 @@ const services = [
   {
     title: "Tourism Packages",
     description: "All-inclusive travel packages with visa & flights included.",
-    link: "/services/tour-packages",
+    link: "/",
     image: "/Premium-Photo-_-Corporate-business-travel.jpeg",
     isExternal: false,
   },

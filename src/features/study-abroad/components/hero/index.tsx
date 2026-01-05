@@ -26,8 +26,8 @@ const carouselSlides = [
   },
   {
     type: "image",
-    src: "/Tbil-Travel-H-3.jpg",
-    title: "Jan 2026 Admission",
+    src: "/Admission-2026.jpg",
+    title: "May 2026 Admission",
     titleLine2: "Now Open!",
     subtitle: "Register To Speak With Top Institutions Across",
     subtitleLine2: "The World For Free!",
