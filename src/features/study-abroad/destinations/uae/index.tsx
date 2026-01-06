@@ -7,9 +7,10 @@ import Link from "next/link";
 export default function StudyInUAE() {
   const [currentImage, setCurrentImage] = useState(0);
   const carouselImages = [
-    "/destinations/uae-university-1.jpg",
-    "/destinations/uae-university-2.jpg",
-    "/destinations/uae-university-3.jpg",
+    "/usa-university-5.jpg",
+    "/usa-university-2.jpg",
+    "/newzealand-university-2.jpg",
+    "/univerity-2.jpg",
   ];
 
   const nextImage = () => {
