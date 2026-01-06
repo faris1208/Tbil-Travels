@@ -31,7 +31,7 @@ export default function StudyAbroadNavbar() {
       hasDropdown: true,
     },
     {
-      href: "/study-abroad/destinations",
+      href: "/study-abroad/destinations/europe",
       label: "DESTINATIONS",
       hasDropdown: true,
     },
@@ -83,7 +83,7 @@ export default function StudyAbroadNavbar() {
               {/* About Us / Contact Us - Hidden on very small screens */}
               <div className="hidden sm:flex items-center gap-2">
                 <Link
-                  href="/about-us"
+                  href="/study-abroad/who-we-are"
                   className="hover:text-gray-900 transition-colors whitespace-nowrap"
                 >
                   About Us
@@ -239,7 +239,7 @@ export default function StudyAbroadNavbar() {
                   );
                 })}
                 <Link
-                  href="/study-abroad/book-appointment"
+                  href="/study-abroad/enquire"
                   className="bg-primary-gradient hover:bg-primary-gradient-hover text-white px-6 py-2 text-sm font-bold uppercase rounded transition-all duration-300 shadow-md hover:shadow-lg ml-4"
                 >
                   BOOK YOUR APPOINTMENT

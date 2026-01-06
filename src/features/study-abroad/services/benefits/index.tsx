@@ -8,7 +8,20 @@ export default function StudyAbroadBenefits() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
+
       <div className="relative bg-[#014e78] text-white py-20 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/study-abroad0services.jpg"
+          alt="Services and commitments background"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-[#014e78]/80"></div>
+
         {/* Background Pattern */}
         <div
           className="absolute inset-0 opacity-20"
@@ -17,21 +30,27 @@ export default function StudyAbroadBenefits() {
             backgroundSize: "30px 30px",
           }}
         ></div>
+
+        {/* Abstract glow overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-white/20 rounded-full blur-3xl"></div>
+        </div>
+
+        {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="mb-4 text-sm md:text-base">
             <Link href="/" className="hover:underline">
               HOME
             </Link>
-            <span className="mx-2">{" > "}</span>
+            <span className="mx-2">{">"}</span>
             <span>STUDY ABROAD BENEFITS FROM NIGERIA</span>
           </div>
-          {/* White Box with Title */}
-          <div className="bg-white text-gray-900 px-6 py-4 inline-block">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold uppercase">
-              STUDY ABROAD BENEFITS
-            </h1>
-          </div>
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
+          STUDY ABROAD BENEFITS
+          </h1>
         </div>
       </div>
 
@@ -43,7 +62,7 @@ export default function StudyAbroadBenefits() {
             {/* Left: Bridge Image with Graduation Cap */}
             <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/study-abroad-benefits-bridge.jpg"
+                src="/achieved-study-abroad.jpg"
                 alt="Bridge with graduation cap and students"
                 fill
                 className="object-cover"
@@ -63,7 +82,7 @@ export default function StudyAbroadBenefits() {
                   life mainly in a positive manner.
                 </p>
                 <p>
-                  <strong>Prime International Study</strong> offers scholarships
+                  <strong>Tbil Travels</strong> offers scholarships
                   and opportunities to students of study abroad benefits from
                   Nigeria.
                 </p>

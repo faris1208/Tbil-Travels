@@ -8,7 +8,20 @@ export default function ServicesAndCommitments() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
+
       <div className="relative bg-[#014e78] text-white py-20 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/study-abroad0services.jpg"
+          alt="Services and commitments background"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-[#014e78]/80"></div>
+
         {/* Background Pattern */}
         <div
           className="absolute inset-0 opacity-20"
@@ -17,20 +30,24 @@ export default function ServicesAndCommitments() {
             backgroundSize: "30px 30px",
           }}
         ></div>
-        {/* Abstract hand and network overlay */}
+
+        {/* Abstract glow overlay */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-white/20 rounded-full blur-3xl"></div>
         </div>
+
+        {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="mb-4 text-sm md:text-base">
             <Link href="/" className="hover:underline">
               HOME
             </Link>
-            <span className="mx-2">{" > "}</span>
+            <span className="mx-2">{">"}</span>
             <span>SERVICES & COMMITMENTS</span>
           </div>
+
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
             OUR SERVICES & COMMITMENTS
           </h1>
@@ -50,10 +67,10 @@ export default function ServicesAndCommitments() {
               <p className="text-gray-700 leading-relaxed mb-6">
                 We provide overseas students with higher education opportunities
                 across the world. We share details of suitable courses available
-                at a wide range of quality universities and study institutions. We
-                believe in delivering a service that crafts you a straightforward,
-                customized and a detailed action plan to make it through university
-                abroad.
+                at a wide range of quality universities and study institutions.
+                We believe in delivering a service that crafts you a
+                straightforward, customized and a detailed action plan to make
+                it through university abroad.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
@@ -88,34 +105,35 @@ export default function ServicesAndCommitments() {
 
             {/* Right: Globe Graphic */}
             <div className="lg:col-span-1 flex items-center justify-center">
-              <div className="relative w-full h-[400px] md:h-[500px]">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
-                  <div className="relative w-full h-full flex items-center justify-center">
-                    {/* Globe base */}
-                    <div className="absolute inset-0 bg-blue-500 rounded-full opacity-80"></div>
-                    {/* Landmarks and airplanes - simplified representation */}
-                    <div className="absolute top-1/4 left-1/4 text-3xl">🗼</div>
-                    <div className="absolute top-1/3 right-1/4 text-3xl">🕰️</div>
-                    <div className="absolute bottom-1/4 left-1/3 text-3xl">🗽</div>
-                    <div className="absolute bottom-1/3 right-1/3 text-3xl">🏛️</div>
-                    <div className="absolute top-1/2 left-1/6 text-3xl">🏯</div>
-                    <div className="absolute top-1/2 right-1/6 text-3xl">🎭</div>
-                    <div className="absolute top-1/6 left-1/2 text-2xl">✈️</div>
-                    <div className="absolute bottom-1/6 right-1/2 text-2xl">✈️</div>
-                    {/* STUDY ABROAD Text */}
-                    <div className="absolute inset-0 flex items-center justify-center z-10">
-                      <div className="text-center">
-                        <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
-                          STUDY ABROAD
-                        </h3>
-                        <div className="mt-2 w-16 h-16 mx-auto bg-green-500 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-2xl font-bold">A</span>
-                        </div>
+            <div className="relative w-full h-full flex items-center justify-center">
+                  {/* Background Image */}
+                  <Image
+                    src="/tbil-servise-aboutus.jpg" // or .jpg
+                    alt="Study abroad globe"
+                    fill
+                    priority
+                    className="object-contain"
+                  />
+
+                  {/* Optional overlay for contrast */}
+                  <div className="absolute inset-0 bg-black/20"></div>
+
+                  {/* STUDY ABROAD Text */}
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                    <div className="text-center">
+                      <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
+                        STUDY ABROAD
+                      </h3>
+
+                      <div className="mt-2 w-16 h-16 mx-auto bg-green-500 rounded-lg flex items-center justify-center">
+                        <span className="text-white text-2xl font-bold">A</span>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              {/* <div className="relative w-full h-[400px] md:h-[500px]">
+               
+              </div> */}
             </div>
           </div>
         </section>
@@ -149,32 +167,40 @@ export default function ServicesAndCommitments() {
               </h2>
               <ul className="space-y-4 text-gray-700 leading-relaxed">
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
-                  <span>
-                    To obtain the best possible course offers for you
+                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">
+                    ■
                   </span>
+                  <span>To obtain the best possible course offers for you</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
+                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">
+                    ■
+                  </span>
                   <span>
                     To advise and guide you at every stage of the process
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
+                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">
+                    ■
+                  </span>
                   <span>
                     To consider your educational interests first at all times
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
+                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">
+                    ■
+                  </span>
                   <span>
                     We have always been committed to making sure that our
                     students receive the best value for what they have paid for.
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
+                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">
+                    ■
+                  </span>
                   <span>
                     From applying for a visa, to completing a college
                     application and finally adjusting in the country of your
@@ -183,11 +209,13 @@ export default function ServicesAndCommitments() {
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
+                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">
+                    ■
+                  </span>
                   <span>
                     Our main focus is optimizing the whole process and making it
                     convenient for our clients. At{" "}
-                    <strong>Prime International Study</strong>, we always strive
+                    <strong>Tbil Travels</strong>, we always strive
                     to be of exquisite value to our clients and make a
                     difference in their lives.
                   </span>
@@ -218,28 +246,36 @@ export default function ServicesAndCommitments() {
                 </h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
-                    <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
+                    <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">
+                      ■
+                    </span>
                     <span>
-                      Education certificates, including any English language test
-                      results
+                      Education certificates, including any English language
+                      test results
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
+                    <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">
+                      ■
+                    </span>
                     <span>
                       Details of two referees, one of which must be from an
                       academic background
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
+                    <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">
+                      ■
+                    </span>
                     <span>
                       For postgraduate course, a CV containing details of all
                       responsibilities held
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
+                    <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">
+                      ■
+                    </span>
                     <span>Your sponsor, if possible</span>
                   </li>
                 </ul>
@@ -269,7 +305,7 @@ export default function ServicesAndCommitments() {
             {/* Right: Image */}
             <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/Tbil-Travel-H-3.jpg"
+                src="/achieved-study-abroad.jpg"
                 alt="Students studying together"
                 fill
                 className="object-cover"
@@ -281,4 +317,3 @@ export default function ServicesAndCommitments() {
     </div>
   );
 }
-

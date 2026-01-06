@@ -31,49 +31,62 @@ export default function ApplicationProcess() {
       title: "Arrange An Appointment With TBILS Expert Staff",
       description:
         "Meeting with an experienced TBILS counsellor will allow you to discuss your options and choose the right fit for you.",
-      image: "/application-process-step1.jpg", // Placeholder - man in blue shirt and red tie
+      image: "/student-offer.jpg", // Placeholder - man in blue shirt and red tie
     },
     {
       number: 2,
       title: "Apply For Admissions",
       description:
         "Once you have decided on your university choice, your counsellor will ask you to provide the necessary documents to apply for admissions.",
-      image: "/application-process-step2.jpg", // Placeholder - students looking at laptop
+      image: "/enroll-deal.jpg", // Placeholder - students looking at laptop
     },
     {
       number: 3,
       title: "Receive Your Offer Letter",
       description:
         "The university will give you offer letter if you have met the criteria for admissions. TBILS will keep in regular contact with you and with your institution of choice.",
-      image: "/application-process-step3.jpg", // Placeholder - Asian man with books
+      image: "/enroll-deal.jpg", // Placeholder - Asian man with books
     },
     {
       number: 4,
       title: "Accept Your Offer",
       description:
         "Once you have decided to accept your offer, TBILS staff can help you notify the institution and pay any required deposit in both a secure and timely manner.",
-      image: "/application-process-step4.jpg", // Placeholder - hand holding document
+      image: "/admission-offer.jpg", // Placeholder - hand holding document
     },
     {
       number: 5,
       title: "Apply For Your Visa",
       description:
         "Our counsellors are trained to give you expert advice on the visa process. They will guide you on preparing your file and check your documents before they are submitted. In-complete documents will cause delays, and sometimes visa rejections.",
-      image: "/application-process-step5.jpg", // Placeholder - passports with visa stamps
+      image: "/WhatsApp Image 2025-11-20 at 14.57.53.jpeg", // Placeholder - passports with visa stamps
     },
     {
       number: 6,
       title: "Prepare For Your Overseas Studies",
       description:
         "Now your visa's filed you will need to start making preparations for living abroad, including booking accommodation. TBILS staff can assist you throughout and will hold pre-departure briefings for students.",
-      image: "/application-process-step6.jpg", // Placeholder - passport and boarding pass
+      image: "/black-guy-praparing.jpg", // Placeholder - passport and boarding pass
     },
   ];
 
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
+
       <div className="relative bg-[#014e78] text-white py-20 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/study-abroad0services.jpg"
+          alt="Services and commitments background"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-[#014e78]/80"></div>
+
         {/* Background Pattern */}
         <div
           className="absolute inset-0 opacity-20"
@@ -82,21 +95,25 @@ export default function ApplicationProcess() {
             backgroundSize: "30px 30px",
           }}
         ></div>
-        {/* Abstract hand and network overlay */}
+
+        {/* Abstract glow overlay */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-white/20 rounded-full blur-3xl"></div>
         </div>
+
+        {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="mb-4 text-sm md:text-base">
             <Link href="/" className="hover:underline">
               HOME
             </Link>
-            <span className="mx-2">{" > "}</span>
+            <span className="mx-2">{">"}</span>
             <span>STUDY ABROAD APPLICATION PROCESSES</span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold uppercase">
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
             APPLICATION PROCESS
           </h1>
         </div>

@@ -7,9 +7,10 @@ import Link from "next/link";
 export default function StudyInAustralia() {
   const [currentImage, setCurrentImage] = useState(0);
   const carouselImages = [
-    "/destinations/australia-university-1.jpg",
-    "/destinations/australia-university-2.jpg",
-    "/destinations/australia-university-3.jpg",
+    "/australia-university-2.jpg",
+    "/australia-university-3.jpg",
+    "/australia-university-4.jpg",
+    "/australia-university.jpg",
   ];
 
   const nextImage = () => {

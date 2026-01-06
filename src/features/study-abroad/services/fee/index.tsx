@@ -18,6 +18,18 @@ export default function ServiceFee() {
     <div className="min-h-screen bg-white">
       {/* Header Section */}
       <div className="relative bg-[#014e78] text-white py-20 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/study-abroad0services.jpg"
+          alt="Services and commitments background"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-[#014e78]/80"></div>
+
         {/* Background Pattern */}
         <div
           className="absolute inset-0 opacity-20"
@@ -26,21 +38,25 @@ export default function ServiceFee() {
             backgroundSize: "30px 30px",
           }}
         ></div>
-        {/* Abstract network overlay */}
+
+        {/* Abstract glow overlay */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-white/20 rounded-full blur-3xl"></div>
         </div>
+
+        {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="mb-4 text-sm md:text-base">
             <Link href="/" className="hover:underline">
               HOME
             </Link>
-            <span className="mx-2">{" > "}</span>
+            <span className="mx-2">{">"}</span>
             <span>SERVICE FEE</span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold uppercase">
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
             FEES
           </h1>
         </div>
@@ -123,7 +139,7 @@ export default function ServiceFee() {
             {/* Right: Image */}
             <div className="relative w-full h-[500px] md:h-[600px] rounded-lg overflow-hidden">
               <Image
-                src="/service-fee-image.jpg"
+                src="/service-fee.jpg"
                 alt="Service fee representation"
                 fill
                 className="object-cover"
@@ -135,7 +151,7 @@ export default function ServiceFee() {
         {/* Section 2: Service Fee Table */}
         <section className="mb-12 md:mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">
-            PRIME INTERNATIONAL STUDY SERVICE FEE
+            Tbil Travels International Study Service Fee
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse border border-gray-300 bg-white shadow-md">

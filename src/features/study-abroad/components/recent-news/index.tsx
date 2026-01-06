@@ -26,9 +26,9 @@ const newsArticles = [
 const studentReview = {
   quote:
     "My experience with Tbil Travel Education has been outstanding. I found them through a Google search, and from the very beginning, their professionalism and transparency stood out. They offer excellent services in a friendly and welcoming atmosphere, and the team is truly hospitable and supportive. I highly recommend Tbil Travel Education to anyone planning to study abroad.",
-  name: "Oluwasanya Olufemi",
+  name: "Anu Michael",
   degree: "Marketing & Digital Strategy | MSc",
-  avatar: "/WhatsApp Image 2025-11-20 at 14.57.53 (2).jpeg",
+  avatar: "/anu micheal.jpg",
 };
 
 export default function StudyAbroadRecentNews() {

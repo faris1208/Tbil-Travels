@@ -7,9 +7,10 @@ import Link from "next/link";
 export default function StudyInNewZealand() {
   const [currentImage, setCurrentImage] = useState(0);
   const carouselImages = [
-    "/destinations/new-zealand-university-1.jpg",
-    "/destinations/new-zealand-university-2.jpg",
-    "/destinations/new-zealand-university-3.jpg",
+    "/newzeland-university-4.jpg",
+    "/newzealand-university-2.jpg",
+    "/newzealand-university-3.jpg",
+    "/newzealand-univeristy-1.jpg",
   ];
 
   const nextImage = () => {

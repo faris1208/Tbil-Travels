@@ -7,9 +7,10 @@ import Link from "next/link";
 export default function StudyInEurope() {
   const [currentImage, setCurrentImage] = useState(0);
   const carouselImages = [
-    "/destinations/uk-university-1.jpg",
-    "/destinations/uk-university-2.jpg",
-    "/destinations/uk-university-3.jpg",
+    "/university-4.jpg",
+    "/university-3.jpg",
+    "/university-in-europe-1.jpg",
+    "/univerity-2.jpg",
   ];
 
   const nextImage = () => {

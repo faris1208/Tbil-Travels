@@ -9,6 +9,18 @@ export default function VisaGuidance() {
     <div className="min-h-screen bg-white">
       {/* Header Section */}
       <div className="relative bg-[#014e78] text-white py-20 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/study-abroad0services.jpg"
+          alt="Services and commitments background"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-[#014e78]/80"></div>
+
         {/* Background Pattern */}
         <div
           className="absolute inset-0 opacity-20"
@@ -17,21 +29,25 @@ export default function VisaGuidance() {
             backgroundSize: "30px 30px",
           }}
         ></div>
-        {/* Abstract hand and network overlay */}
+
+        {/* Abstract glow overlay */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-white/20 rounded-full blur-3xl"></div>
         </div>
+
+        {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="mb-4 text-sm md:text-base">
             <Link href="/" className="hover:underline">
               HOME
             </Link>
-            <span className="mx-2">{" > "}</span>
+            <span className="mx-2">{">"}</span>
             <span>VISA GUIDANCE</span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold uppercase">
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
             VISA GUIDANCE
           </h1>
         </div>
@@ -71,7 +87,7 @@ export default function VisaGuidance() {
             {/* Right: Visa/Passport Image */}
             <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/visa-guidance-visa.jpg"
+                src="/visa-guidance-2.jpg"
                 alt="Visa document"
                 fill
                 className="object-cover"
@@ -107,7 +123,7 @@ export default function VisaGuidance() {
               <ul className="space-y-2 text-gray-700 mb-6">
                 <li className="flex items-start">
                   <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
-                  <span>Bank statements</span>
+                  <span>Proof of Funds</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
@@ -123,15 +139,15 @@ export default function VisaGuidance() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
-                  <span>Proof of English Language proficiency</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
-                  <span>Visa application</span>
+                  <span>Proof of English Language proficiency (if available)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
                   <span>Medical results (for certain countries)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-pink-600 mr-3 mt-1 text-xl font-bold">■</span>
+                  <span>Statement of Purpose/motivation letter</span>
                 </li>
               </ul>
             </div>

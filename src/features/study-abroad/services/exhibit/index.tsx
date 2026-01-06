@@ -9,6 +9,18 @@ export default function ExhibitWithUs() {
     <div className="min-h-screen bg-white">
       {/* Header Section */}
       <div className="relative bg-[#014e78] text-white py-20 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/study-abroad0services.jpg"
+          alt="Services and commitments background"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-[#014e78]/80"></div>
+
         {/* Background Pattern */}
         <div
           className="absolute inset-0 opacity-20"
@@ -17,21 +29,25 @@ export default function ExhibitWithUs() {
             backgroundSize: "30px 30px",
           }}
         ></div>
-        {/* Abstract network overlay */}
+
+        {/* Abstract glow overlay */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-white/20 rounded-full blur-3xl"></div>
         </div>
+
+        {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="mb-4 text-sm md:text-base">
             <Link href="/" className="hover:underline">
               HOME
             </Link>
-            <span className="mx-2">{" > "}</span>
+            <span className="mx-2">{">"}</span>
             <span>EXHIBIT WITH US</span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold uppercase">
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
             STUDENTS EXHIBITIONS
           </h1>
         </div>
@@ -45,7 +61,7 @@ export default function ExhibitWithUs() {
             {/* Left: Exhibition Booth Image */}
             <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/exhibit-booth.jpg"
+                src="/exhibition-image.jpg"
                 alt="Education exhibition booth"
                 fill
                 className="object-cover"

@@ -7,9 +7,10 @@ import Link from "next/link";
 export default function StudyInCanada() {
   const [currentImage, setCurrentImage] = useState(0);
   const carouselImages = [
-    "/destinations/canada-university-1.jpg",
-    "/destinations/canada-university-2.jpg",
-    "/destinations/canada-university-3.jpg",
+    "/canada-university-1.jpg",
+    "/canada-university-2.jpg",
+    "/canada-university-3.jpg",
+    "/canada-university-4.jpg",
   ];
 
   const nextImage = () => {

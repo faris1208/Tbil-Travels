@@ -7,11 +7,11 @@ import Link from "next/link";
 export default function WhoWeAre() {
   const teamMembers = [
     {
-      name: "Oyebola Olabode",
+      name: "Anu Michael",
       title: "Senior Academic Adviser",
       description:
         "I really enjoy working with students from all over the world helping and guiding them for the best educational pathway.",
-      image: "/Tbil-Travel-H-3.jpg", // Replace with actual team member image
+      image: "/anu micheal.jpg", // Replace with actual team member image
     },
     {
       name: "Olabode Mojoyinola",
@@ -241,7 +241,7 @@ export default function WhoWeAre() {
                   </div>
 
                   {/* Social Icons */}
-                  <div className="flex gap-4 mt-6">
+                  {/* <div className="flex gap-4 mt-6">
                     <a
                       href="#"
                       className="w-8 h-8 flex items-center justify-center border border-white/30 rounded hover:bg-white/10 transition-colors"
@@ -277,7 +277,7 @@ export default function WhoWeAre() {
                     >
                       <span className="text-white text-sm">✉</span>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
