@@ -7,8 +7,8 @@ import Link from "next/link";
 // Carousel slides with videos and image
 const carouselSlides = [
   {
-    type: "video",
-    src: "/Best-Study-Abroad-Agency-In-Nigeria_Slider1.mp4",
+    type: "image",
+    src: "/student-walking.jpg",
     title: "The Biggest Study",
     titleLine2: "& Work Festival",
     subtitle: "Register To Speak With Top Institutions Across",
@@ -16,8 +16,8 @@ const carouselSlides = [
     buttonText: "Reserve Your Space Now!",
   },
   {
-    type: "video",
-    src: "/TGM-Study-Abroad-Exhibition-Slider.mp4",
+    type: "image",
+    src: "/student-walking-2.jpg",
     title: "Study & Work",
     titleLine2: "Abroad With Ease",
     subtitle: "Register To Speak With Top Institutions Across",
@@ -41,7 +41,7 @@ export default function StudyAbroadHero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselSlides.length);
-    }, 5000); // Change slide every 5 seconds
+    }, 3000); // Change slide every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
