@@ -48,6 +48,16 @@ const faqData: FAQItem[] = [
     answer:
       "Our dedicated support team is available 24/7 to assist you. You can reach us via phone at +234 908 5551 797 or +234 908 7738 270, email us at holidays@tbil-travels.com, or visit our office at Plot 8, Elegushi Beach Road, Ikate Roundabout, Lekki, Lagos. We're here to help from booking to your return.",
   },
+  {
+    question: "What happens if my flight is cancelled or delayed?",
+    answer:
+      "In the event of a flight cancellation or delay, we will assist you in communicating with the airline for rebooking or available alternatives.",
+  },
+  {
+    question: "Do you offer one-way and round-trip tickets?",
+    answer:
+      "Yes, we offer one-way, round-trip and multi-city flight bookings. You can choose the type of ticket that best suits your needs.",
+  },
 ];
 
 export default function Faq() {

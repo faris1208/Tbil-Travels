@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ExternalLink } from "lucide-react";
+// import { ArrowRight, ExternalLink } from "lucide-react";
 
 const services = [
   {
@@ -100,7 +100,7 @@ export default function OurServices() {
                     className="inline-flex items-center justify-center gap-2 bg-white text-gray-900 hover:bg-gray-100 px-5 py-3 rounded-lg font-medium transition-all duration-300 transform group-hover:translate-y-0 hover:scale-105 active:scale-95 w-full text-center"
                   >
                     Learn More
-                    <ExternalLink className="w-4 h-4" />
+                    {/* <ExternalLink className="w-4 h-4" /> */}
                   </a>
                 ) : (
                   <Link
@@ -108,7 +108,7 @@ export default function OurServices() {
                     className="inline-flex items-center justify-center gap-2 bg-white text-gray-900 hover:bg-gray-100 px-5 py-3 rounded-lg font-medium transition-all duration-300 transform group-hover:translate-y-0 hover:scale-105 active:scale-95 w-full text-center"
                   >
                     Learn More
-                    <ArrowRight className="w-4 h-4" />
+                    {/* <ArrowRight className="w-4 h-4" /> */}
                   </Link>
                 )}
               </div>
