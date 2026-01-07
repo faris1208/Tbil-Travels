@@ -101,7 +101,7 @@ export default function StudyAbroadNavbar() {
               </span>
               {/* Phone Number */}
               <a
-                href="tel:+2349080775662"
+                href="tel:+2349064534991"
                 className="flex items-center gap-1 sm:gap-2 hover:text-gray-900 transition-colors whitespace-nowrap"
               >
                 <svg
@@ -118,7 +118,7 @@ export default function StudyAbroadNavbar() {
                   />
                 </svg>
                 <span className="hidden sm:inline">(+234) 906-453-4991</span>
-                <span className="sm:hidden text-xs">908-077-5662</span>
+                <span className="sm:hidden text-xs">906-453-4991</span>
               </a>
               <span className="hidden sm:inline text-gray-400 mx-1 sm:mx-2">
                 |
