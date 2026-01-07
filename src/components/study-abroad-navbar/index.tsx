@@ -359,7 +359,7 @@ export default function StudyAbroadNavbar() {
                 );
               })}
               <Link
-                href="/study-abroad/book-appointment"
+                href="/study-abroad/enquire"
                 className="block bg-primary-gradient text-white px-3 py-2 text-sm font-bold uppercase rounded text-center mt-4"
                 onClick={closeMenu}
               >

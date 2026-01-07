@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 
@@ -39,7 +40,7 @@ export default function StudyAbroadExplore() {
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Section */}
-        <div className="text-center mb-12 md:mb-16">
+        {/* <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Explore{" "}
             <span className="bg-gray-800 text-white px-4 py-2 rounded-lg inline-block">
@@ -52,7 +53,129 @@ export default function StudyAbroadExplore() {
             admission support, free one-on-one consultation, and a 98% visa
             success rate - all at no extra cost.
           </p>
-        </div>
+        </div> */}
+
+
+<div className="text-center mb-12 md:mb-16">
+  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+    Explore{" "}
+    <span className="country-rotator-container relative bg-gray-800 text-white px-4 py-2 rounded-lg inline-block align-middle">
+      <div className="country-rotator">
+      <span className="country-item">Europe</span>
+        <span className="country-item">The UK</span>
+        <span className="country-item">The US</span>
+        <span className="country-item">Poland</span>
+      </div>
+    </span>{" "}
+    Get Scholarships & Relocate With Ease
+  </h2>
+  <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+    Get access to over 100 partner universities. Enjoy free visa
+    admission support, free one-on-one consultation, and a 98% visa
+    success rate - all at no extra cost.
+  </p>
+</div>
+
+<style jsx>{`
+  .country-rotator-container {
+    width: 150px;
+    height: 3.5rem;
+    overflow: hidden;
+  }
+
+  .country-rotator {
+    animation: slide 8s infinite ease-in-out;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .country-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    font-weight: bold;
+    width: 100%;
+  }
+
+  @keyframes slide {
+    0%, 20% {
+      transform: translateY(0);
+    }
+    25%, 45% {
+      transform: translateY(-3.5rem);
+    }
+    50%, 70% {
+      transform: translateY(-7rem);
+    }
+    75%, 95% {
+      transform: translateY(-10.5rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .country-rotator-container {
+      width: 180px;
+      height: 4.2rem;
+    }
+    
+    .country-item {
+      height: 4.2rem;
+    }
+    
+    @keyframes slide {
+      0%, 20% {
+        transform: translateY(0);
+      }
+      25%, 45% {
+        transform: translateY(-4.2rem);
+      }
+      50%, 70% {
+        transform: translateY(-8.4rem);
+      }
+      75%, 95% {
+        transform: translateY(-12.6rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .country-rotator-container {
+      width: 200px;
+      height: 4.8rem;
+    }
+    
+    .country-item {
+      height: 4.8rem;
+    }
+    
+    @keyframes slide {
+      0%, 20% {
+        transform: translateY(0);
+      }
+      25%, 45% {
+        transform: translateY(-4.8rem);
+      }
+      50%, 70% {
+        transform: translateY(-9.6rem);
+      }
+      75%, 95% {
+        transform: translateY(-14.4rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+`}</style>
 
         {/* Step-by-Step Process */}
         <div className="relative mt-16 md:mt-24">

@@ -113,7 +113,7 @@ export default function StudyAbroadHero() {
                 </p>
               </div>
               <Link
-                href="/study-abroad/book-appointment"
+                href="/study-abroad/enquire"
                 className="inline-block bg-[#0290de] hover:bg-[#014e78] text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 {carouselSlides[currentIndex].buttonText}
@@ -170,7 +170,7 @@ export default function StudyAbroadHero() {
               />
             </svg>
             <Link
-              href="/study-abroad/book-appointment"
+              href="/study-abroad/enquire"
               className="inline-block bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap"
             >
               Get Started Now
