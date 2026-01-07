@@ -148,6 +148,7 @@ export default function StudyAbroadNavbar() {
       </div>
 
       {/* Main Navigation */}
+      
       <div className="bg-white">
         <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-4">
           <div className="flex items-center justify-between h-20">
