@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 
 const features = [
@@ -193,7 +194,19 @@ export default function WhyChooseUs() {
               Join thousands of satisfied travelers who have explored the world
               with us.
             </p>
-            <button className="bg-white text-[#014e78] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+            <button
+              onClick={() => {
+                // Find the services component
+                const servicesSection = document.getElementById("our-services");
+                if (servicesSection) {
+                  servicesSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }}
+              className="bg-white cursor-pointer text-[#014e78] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
               Explore Our Packages
             </button>
           </div>
