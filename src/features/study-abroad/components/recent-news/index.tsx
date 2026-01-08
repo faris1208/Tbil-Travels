@@ -8,7 +8,7 @@ const newsArticles = [
     id: 1,
     image: "/visa-application-mistake.jpg",
     headline:
-      "5 Visa Application Mistakes That Could Derail Your Study Abroad Dream (And How TGM Education Saves the Day)",
+      "5 Visa Application Mistakes That Could Derail Your Study Abroad Dream (And How Tbils Saves the Day)",
     snippet:
       "Imagine you're clutching your admission letter, your family's throwing a...",
     link: "/study-abroad/news",
@@ -21,6 +21,42 @@ const newsArticles = [
     snippet:
       "Preparing to study abroad is exciting, but packing can quickly...",
     link: "/study-abroad",
+  },
+  {
+    id: 3,
+    image: "/exhibition-image.jpg",
+    headline:
+      "Top 10 Fully Funded Scholarship Opportunities for African Students in 2026",
+    snippet:
+      "Discover the most lucrative scholarship programs available for African students...",
+    link: "/study-abroad/scholarships",
+  },
+  {
+    id: 4,
+    image: "/book-appointment.jpg",
+    headline:
+      "IELTS vs TOEFL: Which English Language Test is Better for Your Study Abroad Journey?",
+    snippet:
+      "Choosing the right English proficiency test can significantly impact...",
+    link: "/study-abroad/tests",
+  },
+  {
+    id: 5,
+    image: "/Travel-4.jpg",
+    headline:
+      "7 Essential Tips for Nigerian Students Adjusting to European Universities",
+    snippet:
+      "Moving to a new country for studies can be challenging. Here are tips...",
+    link: "/study-abroad/tips",
+  },
+  {
+    id: 6,
+    image: "/Pre-Departure.jpg",
+    headline:
+      "Student Visa Processing Times: What to Expect in 2026",
+    snippet:
+      "Understanding visa processing timelines can help you plan your study abroad journey...",
+    link: "/study-abroad/visa-times",
   },
 ];
 
@@ -36,7 +72,7 @@ const studentReviews = [
   {
     id: 2,
     quote:
-      "The support I received from TGM Education was exceptional. They guided me through every step of the application process and helped me secure a scholarship I never thought possible. Studying in Europe was a dream come true!",
+      "The support I received from Tbils was exceptional. They guided me through every step of the application process and helped me secure a scholarship I never thought possible. Studying in Europe was a dream come true!",
     name: "David Johnson",
     degree: "Computer Science | BSc",
     avatar: "/service-fee.jpg",
@@ -44,7 +80,7 @@ const studentReviews = [
   {
     id: 3,
     quote:
-      "As an international student, I was overwhelmed by the visa process. TGM Education made it so simple and stress-free. Their 98% visa success rate is real - I'm living proof!",
+      "As an international student, I was overwhelmed by the visa process. Tbils made it so simple and stress-free. Their 98% visa success rate is real - I'm living proof!",
     name: "Sarah Williams",
     degree: "Business Administration | MBA",
     avatar: "/study.jpgtp2fz4.jpg-c4e2f2a633c82bdc5af3dc2cc841a257-doc.jpeg",
@@ -52,7 +88,7 @@ const studentReviews = [
   {
     id: 4,
     quote:
-      "From university selection to accommodation assistance, TGM Education provided comprehensive support. Their network of partner universities gave me options I wouldn't have found on my own.",
+      "From university selection to accommodation assistance, Tbils provided comprehensive support. Their network of partner universities gave me options I wouldn't have found on my own.",
     name: "Michael Chen",
     degree: "Engineering | PhD",
     avatar: "/2026-01-03 16.30.51.jpg",
@@ -61,18 +97,41 @@ const studentReviews = [
 
 export default function StudyAbroadRecentNews() {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+  const [currentGroupIndex, setCurrentGroupIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
+  // Create groups of 2 articles each
+  const articleGroups = [];
+  for (let i = 0; i < newsArticles.length; i += 2) {
+    articleGroups.push(newsArticles.slice(i, i + 2));
+  }
+
+  // Auto-scroll for news articles (every 2 seconds)
+  useEffect(() => {
+    if (isPaused) return;
+    
+    const interval = setInterval(() => {
+      setCurrentGroupIndex((prevIndex) => 
+        prevIndex === articleGroups.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [isPaused, articleGroups.length]);
+
+  // Auto-scroll for student reviews (every 3 seconds)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentReviewIndex((prevIndex) => 
         prevIndex === studentReviews.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Change every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   const currentReview = studentReviews[currentReviewIndex];
+  const currentGroup = articleGroups[currentGroupIndex] || [];
 
   return (
     <section className="py-16 md:py-24 bg-white relative overflow-hidden">
@@ -90,52 +149,93 @@ export default function StudyAbroadRecentNews() {
           {/* Recent News Section */}
           <div>
             {/* Section Header */}
-            <div className="flex items-center gap-3 mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-                Recent News
-              </h2>
-              <div className="flex gap-2 items-center">
-                <div className="w-2 h-2 rounded-full bg-gray-600"></div>
-                <div className="w-2 h-2 rounded-full bg-gray-600"></div>
-                <div className="w-2 h-2 rounded-full bg-[#0290de]"></div>
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-3">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+                  Recent News
+                </h2>
+                <div className="flex gap-2 items-center">
+                  <div className="w-2 h-2 rounded-full bg-gray-600"></div>
+                  <div className="w-2 h-2 rounded-full bg-gray-600"></div>
+                  <div className="w-2 h-2 rounded-full bg-[#0290de]"></div>
+                </div>
+              </div>
+              <div className="text-sm text-gray-500">
+                {currentGroupIndex + 1} / {articleGroups.length}
               </div>
             </div>
 
-            {/* News Articles */}
-            <div className="space-y-8">
-              {newsArticles.map((article) => (
-                <Link
-                  key={article.id}
-                  href={article.link}
-                  className="block group hover:opacity-90 transition-opacity"
-                >
-                  <div className="flex flex-col md:flex-row gap-4">
-                    {/* Article Image */}
-                    <div className="flex-shrink-0 w-full md:w-48 h-48 rounded-lg overflow-hidden">
-                      <Image
-                        src={article.image}
-                        alt={article.headline}
-                        width={200}
-                        height={200}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
+            {/* News Articles Carousel */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+            >
+              {/* Two Articles Container with fade/slide animation */}
+              <div className="space-y-8 relative min-h-[400px]">
+                {articleGroups.map((group, groupIndex) => (
+                  <div
+                    key={groupIndex}
+                    className={`absolute top-0 left-0 w-full transition-all duration-500 ease-in-out ${
+                      groupIndex === currentGroupIndex
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-8"
+                    }`}
+                  >
+                    <div className="space-y-8">
+                      {group.map((article) => (
+                        <Link
+                          key={article.id}
+                          href={article.link}
+                          className="block group hover:opacity-90 transition-opacity"
+                        >
+                          <div className="flex flex-col md:flex-row gap-4">
+                            {/* Article Image */}
+                            <div className="flex-shrink-0 w-full md:w-48 h-48 rounded-lg overflow-hidden">
+                              <Image
+                                src={article.image}
+                                alt={article.headline}
+                                width={200}
+                                height={200}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              />
+                            </div>
 
-                    {/* Article Content */}
-                    <div className="flex-1">
-                      <h3 className="text-lg md:text-xl font-bold text-[#0290de] mb-2 group-hover:underline">
-                        {article.headline}
-                      </h3>
-                      <p className="text-gray-600 text-sm md:text-base mb-3 line-clamp-2">
-                        {article.snippet}
-                      </p>
-                      <span className="text-gray-900 font-bold text-sm">
-                        read more &gt;
-                      </span>
+                            {/* Article Content */}
+                            <div className="flex-1">
+                              <h3 className="text-lg md:text-xl font-bold text-[#0290de] mb-2 group-hover:underline">
+                                {article.headline}
+                              </h3>
+                              <p className="text-gray-600 text-sm md:text-base mb-3 line-clamp-2">
+                                {article.snippet}
+                              </p>
+                              <span className="text-gray-900 font-bold text-sm">
+                                read more &gt;
+                              </span>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
                     </div>
                   </div>
-                </Link>
-              ))}
+                ))}
+              </div>
+
+              {/* Navigation Dots - Removed arrows, kept dots for manual control */}
+              <div className="flex justify-center gap-2 mt-8">
+                {articleGroups.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentGroupIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentGroupIndex
+                        ? "bg-[#0290de] scale-125"
+                        : "bg-gray-300 hover:bg-gray-400"
+                    }`}
+                    aria-label={`View articles group ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 

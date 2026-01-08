@@ -17,7 +17,7 @@ const carouselSlides = [
   },
   {
     type: "image",
-    src: "/student-walking-2.jpg",
+    src: "/WhatsApp Image 2025-11-20 at 14.57.52.jpeg",
     title: "Study & Work",
     titleLine2: "Abroad With Ease",
     subtitle: "Register To Speak With Top Institutions Across",
@@ -26,7 +26,7 @@ const carouselSlides = [
   },
   {
     type: "image",
-    src: "/Admission-2026.jpg",
+    src: "/enroll-deal.jpg",
     title: "May 2026 Admission",
     titleLine2: "Now Open!",
     subtitle: "Register To Speak With Top Institutions Across",
