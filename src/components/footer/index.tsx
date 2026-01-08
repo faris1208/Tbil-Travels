@@ -30,7 +30,7 @@ export default function Footer() {
   const aboutLinks = [
     { href: "/about-us", label: "Our Story" },
     { href: "/about-us", label: "Working With Us" },
-    { href: "/about-us", label: "Be Our Partner" },
+    { href: "/contact", label: "Be Our Partner" },
   ];
 
   const socialLinks = [

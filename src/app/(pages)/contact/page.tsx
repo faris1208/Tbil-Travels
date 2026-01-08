@@ -4,10 +4,10 @@ import React, { useState } from "react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
-    subject: "",
     message: "",
   });
 
@@ -32,21 +32,28 @@ export default function ContactPage() {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Here you would typically make an API call to your backend
+      // For now, we'll simulate the API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Simulate successful submission
       setSubmitStatus("success");
       setFormData({
-        name: "",
+        firstName: "",
+        lastName: "",
         email: "",
         phone: "",
-        subject: "",
         message: "",
       });
 
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitStatus(null), 5000);
-    }, 1000);
+    } catch (error) {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -73,7 +80,8 @@ export default function ContactPage() {
         </svg>
       ),
       title: "Address",
-      content: " Plot 1-3, Shasha road, Akowonjo Roundabout, Beside De-Santos hotel, Akowonjo, Lagos, Nigeria, 100231",
+      content:
+        " Plot 1-3, Shasha road, Akowonjo Roundabout, Beside De-Santos hotel, Akowonjo, Lagos, Nigeria, 100231",
       link: null,
     },
     {
@@ -121,7 +129,7 @@ export default function ContactPage() {
   const socialLinks = [
     {
       name: "Twitter",
-      href: "https://twitter.com",
+      href: "https://x.com/tbil_travels?s=21",
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
@@ -130,7 +138,7 @@ export default function ContactPage() {
     },
     {
       name: "Facebook",
-      href: "https://facebook.com",
+      href: "https://www.facebook.com/share/16dTFqyA5M/?mibextid=wwXIfr",
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -139,7 +147,7 @@ export default function ContactPage() {
     },
     {
       name: "Instagram",
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/tbiltravels?igsh=ejVlcTRzY3pnazVk",
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
@@ -147,14 +155,14 @@ export default function ContactPage() {
       ),
     },
     {
-      name: "Pinterest",
-      href: "https://pinterest.com",
+      name: "Tiktok",
+      href: "https://www.tiktok.com/@tbil_travel?_r=1&_d=el259mlkb7mfhe&sec_uid=MS4wLjABAAAAaiqHV7Syqa8YSNvpJxrhJraY0X8h0-pOYntAbFZhRyDdRCWnuYda-Btyc5Xl_gQT&share_author_id=7334705130954785797&sharer_language=en&source=h5_m&u_code=ecfm9adm69a8mj&item_author_type=1&utm_source=copy&tt_from=copy&enable_checksum=1&utm_medium=ios&share_link_id=78455D39-3CE0-4FA2-A4DE-0A300CE7FC50&user_id=7334705130954785797&sec_user_id=MS4wLjABAAAAaiqHV7Syqa8YSNvpJxrhJraY0X8h0-pOYntAbFZhRyDdRCWnuYda-Btyc5Xl_gQT&social_share_type=4&ug_btm=b0,b0&utm_campaign=client_share&share_app_id=1233",
       icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 0C5.373 0 0 5.372 0 12s5.373 12 12 12c5.084 0 9.426-3.163 11.174-7.637-.15-.706-.283-1.8.06-2.57.32-.77 2.066-13.48 2.066-13.48s-.528-.34-1.323-.34c-1.77 0-3.052 1.07-3.052 2.38 0 1.24.94 1.92 1.77 1.92.87 0 1.44-.56 1.44-1.38 0-.72-.48-1.33-1.17-1.33-.37 0-.75.08-1.05.24 0-.2.01-.41.01-.62 0-3.06-2.08-5.24-5.96-5.24-4.05 0-6.74 2.97-6.74 6.3 0 2.4.92 4.52 2.9 5.31.32.13.61.07.71-.23.07-.26.24-.92.34-1.28.11-.42.07-.57-.25-.94-1.4-1.65-2.3-3.78-2.3-6.4 0-4.98 3.63-9.56 9.56-9.56 5.1 0 9.06 3.71 9.06 8.65 0 5.07-3.2 9.14-7.64 9.14-1.5 0-2.91-.78-3.4-1.92l-.92 3.5c-.34 1.32-1.26 2.97-1.88 3.98 1.42.44 2.92.67 4.48.67 6.627 0 12-5.373 12-12S18.627 0 12 0z" />
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/>
         </svg>
       ),
-    },
+    }
   ];
 
   return (
@@ -200,23 +208,44 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label
-                      htmlFor="name"
+                      htmlFor="firstName"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Full Name *
+                      First Name *
                     </label>
                     <input
                       type="text"
-                      id="name"
-                      name="name"
+                      id="firstName"
+                      name="firstName"
                       required
-                      value={formData.name}
+                      value={formData.firstName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0290de] focus:border-[#0290de] outline-none transition-colors"
-                      placeholder="John Doe"
+                      className="w-full text-[#000] px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0290de] focus:border-[#0290de] outline-none transition-colors"
+                      placeholder="John"
                     />
                   </div>
 
+                  <div>
+                    <label
+                      htmlFor="lastName"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className="w-full text-[#000] px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0290de] focus:border-[#0290de] outline-none transition-colors"
+                      placeholder="Doe"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label
                       htmlFor="email"
@@ -231,57 +260,28 @@ export default function ContactPage() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0290de] focus:border-[#0290de] outline-none transition-colors"
+                      className="w-full text-[#000] px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0290de] focus:border-[#0290de] outline-none transition-colors"
                       placeholder="john@example.com"
                     />
                   </div>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label
                       htmlFor="phone"
                       className="block text-sm font-medium text-gray-700 mb-2"
                     >
-                      Phone Number
+                      Phone Number *
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
+                      required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0290de] focus:border-[#0290de] outline-none transition-colors"
+                      className="w-full text-[#000] px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0290de] focus:border-[#0290de] outline-none transition-colors"
                       placeholder="+234 123 456 7890"
                     />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="subject"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Subject *
-                    </label>
-                    <select
-                      id="subject"
-                      name="subject"
-                      required
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0290de] focus:border-[#0290de] outline-none transition-colors"
-                    >
-                      <option value="">Select a subject</option>
-                      <option value="tour-packages">Tour Packages</option>
-                      <option value="study-abroad">Study Abroad</option>
-                      <option value="flight-booking">Flight Booking</option>
-                      <option value="visa-support">Visa Support</option>
-                      <option value="travel-insurance">Travel Insurance</option>
-                      <option value="hotel-reservations">
-                        Hotel Reservations
-                      </option>
-                      <option value="general">General Inquiry</option>
-                    </select>
                   </div>
                 </div>
 
@@ -299,7 +299,7 @@ export default function ContactPage() {
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0290de] focus:border-[#0290de] outline-none transition-colors resize-none"
+                    className="w-full text-[#000] px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0290de] focus:border-[#0290de] outline-none transition-colors resize-none"
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
@@ -307,9 +307,35 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-primary-gradient hover:bg-primary-gradient-hover text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="w-full cursor-pointer bg-primary-gradient hover:bg-primary-gradient-hover text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? (
+                    <>
+                      <svg
+                        className="animate-spin h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                      Sending Message...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </button>
               </form>
             </div>
